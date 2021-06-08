@@ -27,11 +27,12 @@ body{
 }
 
 .main{
-    display: grid;
+    display: grid; 
     grid-template-areas:
     "main__principal main__principal"
     "main__izquierda main__derecha";
     width: 45%;
+    max-width: 600px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
     margin-left: auto;
@@ -169,8 +170,8 @@ body{
     }
 }
 
-@media (max-width: 992px){
+@media (min-width: 769px){
     .main{
-        width: 80%;
+        min-width: 600px;
     }
 }
