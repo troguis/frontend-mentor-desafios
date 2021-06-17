@@ -1,0 +1,165 @@
+$Bright-orange: #e38826;
+$Dark-cyan: #006970;
+$Very-dark-cyan: #004241;
+$verde-troguis: #2bb184;
+
+$Transparent-white: #ffffffbf; //(paragraphs)
+$Very-light-gray: #f2f2f2;  //(background, headings, buttons)
+
+html{
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: $Very-light-gray;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.main{
+    width: 850px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contenedor{
+    display: grid;
+    grid-template-areas:
+    "sedans suvs luxury"
+    "sedans suvs luxury"
+    ;
+    
+    &__svg{
+        width: 64px;
+    }
+
+    & h1{
+        font-family: 'Big Shoulders Display', cursive;
+        color: $Very-light-gray;
+    }
+
+    &__card{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 35px;
+        color: $Transparent-white;
+
+        &--sedans{
+            background-color: $Bright-orange;
+        }
+
+        &--suvs{
+            background-color: $Dark-cyan;
+        }
+
+        &--luxury{
+            background-color: $Very-dark-cyan;
+        }
+    }
+
+    &__parrafo{
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    &__button{
+        text-decoration: none;
+        color: $Transparent-white;
+        padding: 10px 20px;
+        border: 2px solid $Very-light-gray;
+        border-radius: 30px;
+
+        &:hover{
+            background-color: $Very-light-gray;
+        }
+
+        &--sedans:hover{
+            color: $Bright-orange;
+        }
+
+        &--suvs:hover{
+            color: $Dark-cyan;
+        }
+
+        &--luxury:hover{
+            color: $Very-dark-cyan;
+        }
+    }
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+
+    &__datos{
+      text-align: center;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    a{
+      color: $verde-troguis;
+      text-decoration: none;
+    }
+  }
+/* ------------------------Mediaquerys------------------------*/
+@media (max-width: 576px){
+    .main{
+        width: 320px; 
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .contenedor{
+        display: grid;
+        grid-template-areas:
+        "sedans"
+        "sedans"
+        "suvs"
+        "suvs"
+        "luxury"
+        "luxury"
+        ;
+
+        &__button{
+                background-color: $Very-light-gray;
+    
+            &--sedans{
+                color: $Bright-orange;
+            }
+    
+            &--suvs{
+                color: $Dark-cyan;
+            }
+    
+            &--luxury{
+                color: $Very-dark-cyan;
+            }
+        }
+    }
+
+    .footer{
+        &__datos{
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+}
+
+@media (max-width: 300px){
+    .main{
+        width: 260px; 
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}

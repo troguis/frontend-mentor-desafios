@@ -1,0 +1,141 @@
+html {
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  background-color: #f2f2f2;
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main {
+  width: 850px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.contenedor {
+  display: grid;
+  grid-template-areas: "sedans suvs luxury" "sedans suvs luxury";
+}
+
+.contenedor__svg {
+  width: 64px;
+}
+
+.contenedor h1 {
+  font-family: 'Big Shoulders Display', cursive;
+  color: #f2f2f2;
+}
+
+.contenedor__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 50px 35px;
+  color: #ffffffbf;
+}
+
+.contenedor__card--sedans {
+  background-color: #e38826;
+}
+
+.contenedor__card--suvs {
+  background-color: #006970;
+}
+
+.contenedor__card--luxury {
+  background-color: #004241;
+}
+
+.contenedor__parrafo {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.contenedor__button {
+  text-decoration: none;
+  color: #ffffffbf;
+  padding: 10px 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 30px;
+}
+
+.contenedor__button:hover {
+  background-color: #f2f2f2;
+}
+
+.contenedor__button--sedans:hover {
+  color: #e38826;
+}
+
+.contenedor__button--suvs:hover {
+  color: #006970;
+}
+
+.contenedor__button--luxury:hover {
+  color: #004241;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer__datos {
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.footer a {
+  color: #2bb184;
+  text-decoration: none;
+}
+
+/* ------------------------Mediaquerys------------------------*/
+@media (max-width: 576px) {
+  .main {
+    width: 320px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .contenedor {
+    display: grid;
+    grid-template-areas: "sedans" "sedans" "suvs" "suvs" "luxury" "luxury";
+  }
+  .contenedor__button {
+    background-color: #f2f2f2;
+  }
+  .contenedor__button--sedans {
+    color: #e38826;
+  }
+  .contenedor__button--suvs {
+    color: #006970;
+  }
+  .contenedor__button--luxury {
+    color: #004241;
+  }
+  .footer__datos {
+    font-size: 12px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 300px) {
+  .main {
+    width: 260px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
+}
+/*# sourceMappingURL=estilos.css.map */
