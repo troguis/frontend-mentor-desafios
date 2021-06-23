@@ -63,6 +63,7 @@ body {
   padding: 12px 45px;
   border-radius: 18px;
   color: #674baf;
+  box-shadow: 0 2px 5px 1px #2e2e2e;
 }
 
 .huddle__texto--btn:hover {
