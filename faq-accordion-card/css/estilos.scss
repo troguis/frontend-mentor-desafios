@@ -1,0 +1,182 @@
+// Variables
+/* Text */
+$Very-dark-desaturated-blue: #1d1e35;
+$Soft-red: #f47c57;
+/* Background gradient */
+$Soft-violet: #af67e9;
+$Sof-blue: #6565e7;
+/* Text */
+$Very-dark-grayish-blue: #4a4b5e;
+$Dark-grayish-blue: #787887;
+/* Dividers */
+$Light-grayish-blue: #e7e7e9;
+
+html {
+    box-sizing: border-box; 
+    font-size: 62.5%;
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  body{
+    font-family: 'Kumbh Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-color: $Soft-violet;
+  }
+
+  .main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 850px;
+    height: 450px;
+    background-color: $Light-grayish-blue;
+    position: relative;
+    border-radius: 25px;
+
+
+    &__box{
+      position: absolute;
+      left: -130px;
+      top: 180px;
+    }
+  }
+ 
+  .faq{
+
+    &__img{
+      width: 100%;
+      background-color: white;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      position: relative;
+      background-image: url(../images/bg-pattern-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: 700px 800px;
+      background-position: -390px -245px;
+      overflow: hidden;
+      border-radius: 25px 0 0 25px;
+      
+      &--woman{
+        width: 380px;
+        position: absolute;
+        left: -60px;
+      }
+      
+    }
+
+    &__titulo{
+      font-size: 2.6rem;
+    }
+
+    &__content{
+      padding: 20px 70px 20px 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      border-radius: 0 25px 25px 0;
+    }
+  }
+
+  .summary{
+    color: $Very-dark-desaturated-blue;
+    border-bottom: 1px solid gray;
+    font-size: 1.2rem;
+    padding: 12px 0 10px; /* ↑ ←→ ↓ */
+    cursor: pointer;
+    position: relative;
+
+    &__parrafo{
+      color: $Very-dark-grayish-blue;
+    }
+  }
+
+  .details[open] .summary::after{
+    transform: rotate(-180deg);
+  }
+
+//esto sobre escribe o pisa el hover por la especificidad ya que tiene 2 selectores y un atributo en cambio el hover solo tiene 1 clase
+// y 1 pseudoclase (lo que hace es que al darle click se despliega y se deshabilita el hover)
+  .details[open] .summary{
+    font-weight: 700;
+    color: $Very-dark-desaturated-blue;
+  }
+
+  .summary::after{
+    content: "";
+    background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    width: 1rem;
+    height: 0.7rem;
+    position: absolute;
+    transform: translateY(-50%);
+    transition: transform .3s linear;
+    top: 50%;
+    right: 0;
+  }
+
+  .summary::-webkit-details-marker, 
+  .summary::marker {
+    content: "";
+  }
+
+  .hover:hover{
+    color: $Soft-red;
+    transition: .2s linear;
+  }
+  /*------------------------------------------------------*/
+  @media screen and (max-width: 992px){
+    .main{
+      grid-template-columns: repeat(1, 1fr);
+      width: 320px;
+      height: auto;
+
+      &__box{
+        position: absolute;
+        width: 90px;
+        left: 55px;
+        top: -20px;
+      }
+    }
+
+    .faq{
+
+      &__img{
+        width: 100%;
+        height: 110px;
+        /* background-image: none; */
+        background-size: 200px;
+        background-position: 60px -100px;
+        overflow: visible;
+        border-radius: 25px 25px 0 0;
+        &--woman{
+          width: 200px;
+          height: 140px;
+          position: absolute;
+          top: -70px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        
+      }
+
+      &__titulo{
+        text-align: center;
+      }
+
+      &__content{
+        padding: 10px 40px 60px 40px;
+        border-radius: 0 0 25px 25px;
+      }
+
+    }
+  }
