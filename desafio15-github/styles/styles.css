@@ -1,0 +1,214 @@
+/* Todos */
+.textorobotoslab{
+    font-family: 'Roboto Slab', serif;
+}
+
+.textoroboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/* ------------Index------------- */
+
+body{
+    background-color: grey;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: 
+    'item1 item1 item1'
+    'item2 item2 item3'
+    'item4 item4 item3'
+    'item5 item5 item5';
+}
+
+.contenedor-modal{
+    /* height: 50px; */
+    text-align: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.modalbootstrap{
+    margin: 20px auto;
+}
+
+.item1{
+    grid-area: item1;
+    background-color: aquamarine;
+}
+
+.item2{
+    grid-area: item2;
+    background-color: red;
+}
+
+.item3{
+    grid-area: item3;
+    background-color: blue;
+}
+
+.item4{
+    grid-area: item4;
+    background-color: gray;
+}
+
+.item5{
+    grid-area: item5;
+    background-color: purple;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #464646;
+    background-image: linear-gradient(#6262ff, #ff9494);
+}
+
+.logo{
+    font-size: 25px;
+}
+
+.lista-noordenada{
+    /* background-color: #332f2c; */
+    /* background-image: url(../img/fondo-oscuro.jpg); */
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.lista-noordenada:hover{
+    padding-right: 55px;
+    transform: scale(1.1, 1.5);
+    transition: 1s;
+}
+
+.index{
+    background-color: #d99058;
+}
+
+.lista-noordenada li a{
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+}
+
+.lista-noordenada li:hover{
+    background-color: #9df89d;
+}
+
+.lista-noordenada li a:hover{
+    color: #000;
+}
+
+
+li{
+    list-style: none;
+    margin-bottom: 1.5rem;
+    border: 1px solid yellow;
+    padding: 0.5rem;
+}
+
+.index-fondo{
+    background-color: #ff7474;
+}
+
+.index-footer{
+    background-color: #464646;
+    text-align: center;
+}
+
+.index-footer p{
+    color: #fff;
+}
+
+/* ----------Fin Index---------- */
+
+/* ----------Nosotros---------- */
+
+.nosotros{
+    background-color: #d99058;
+}
+
+.nosotros-fondo{
+    background-color: #ff7474;
+}
+
+.nosotros-footer{
+    background-color: #464646;
+    text-align: center;
+}
+
+
+/* ----------Fin Nosotros---------- */
+
+/* ----------Servicios---------- */
+
+.servicios{
+    background-color: #d99058;
+}
+
+.logo{
+    background-color: #00aeae;
+}
+
+.servicios-fondo{
+    background-color: #ff7474;
+}
+
+.servicios-footer{
+    background-color: #464646;
+    text-align: center;
+}
+
+
+/* ----------Fin Servicios---------- */
+
+/* ----------Clientes---------- */
+
+.clientes{
+    background-color: #d99058;
+}
+
+.logo{
+    background-color: #00aeae;
+}
+
+.clientes-fondo{
+    background-color: #ff7474;
+}
+
+.clientes-footer{
+    background-color: #464646;
+    text-align: center;
+}
+
+
+/* ----------Fin Clientes---------- */
+
+/* ----------Contacto---------- */
+
+.contacto{
+    background-color: #d99058;
+}
+
+.logo{
+    background-color: #00aeae;
+}
+
+.contacto-fondo{
+    background-color: #ff7474;
+}
+
+.contacto-footer{
+    background-color: #464646;
+    text-align: center;
+}
+
+
+/* ----------Fin Contacto---------- */
