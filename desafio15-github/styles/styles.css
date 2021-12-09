@@ -12,7 +12,7 @@
 /* ------------Index------------- */
 
 body{
-    background-color: grey;
+    background-color: #5a5a5a;
 }
 
 .grid-container{
@@ -39,7 +39,7 @@ body{
 
 .item1{
     grid-area: item1;
-    background-color: aquamarine;
+    background-color: #6afaca;
 }
 
 .item2{
